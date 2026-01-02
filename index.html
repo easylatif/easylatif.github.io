@@ -1,31 +1,154 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Site en construction</title>
-  <style>
-    :root { --bg:#0f172a; --card:#111827; --muted:#94a3b8; --fg:#e5e7eb; --accent:#60a5fa; }
-    * { box-sizing: border-box; }
-    body { margin:0; min-height:100vh; display:grid; place-items:center; background:#0f172a; font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--fg); }
-    .card { width:min(700px,92vw); padding:48px; border-radius:20px; background:linear-gradient(180deg,#0b1220,var(--card)); text-align:center; }
-    .logo { max-width:360px; height:auto; margin:0 auto 24px; display:block; }
-    h1 { margin:0 0 10px; font-size:clamp(26px,3.6vw,34px); }
-    p { margin:8px 0 0; color:var(--muted); font-size:clamp(15px,2.3vw,17px); }
-    .chip { display:inline-block; margin-top:14px; padding:6px 10px; border-radius:999px; background:#0b1220; border:1px solid rgba(255,255,255,.06); color:#cbd5e1; font-size:13px; }
-    a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
-    footer { margin-top:26px; font-size:13px; color:#9ca3af; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAZALIA – Import Export de produits alimentaires</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #f4f6f3;
+            color: #2f3e2f;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #f9faf8;
+            color: #2f3e2f;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid #2f6f4e;
+        }
+
+        header img {
+            max-width: 140px;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            margin: 10px 0 5px;
+            font-size: 2.4em;
+            letter-spacing: 2px;
+            color: #b8322a;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #4f6f5a;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .intro {
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: #2f6f4e;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card p {
+            padding: 15px;
+            font-size: 0.95em;
+        }
+
+        footer {
+            background-color: #2f3e2f;
+            color: #eaeaea;
+            text-align: center;
+            padding: 30px 15px;
+            font-size: 0.9em;
+        }
+
+        footer strong {
+            font-size: 1.1em;
+        }
+
+        .logo {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-  <main class="card" role="main" aria-label="Site en construction">
-    <!-- Remplace le chemin si tu utilises un autre nom de fichier -->
-    <img class="logo" src="/LOGO.png" alt="logo" />
-    <h1>Site en construction</h1>
-    <p>Votre nouveau site arrive très bientôt.</p>
-    <p class="chip">Contact : <a href="mailto:contact@jazalia.com">contact@jazalia.com</a></p>
-    <footer>© <span id="y"></span> JAZALIA </footer>
-  </main>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+<header>
+    <!-- Remplacer src par ton logo PNG -->
+    <img src="LOGO.png" alt="Logo JAZALIA – Trade and Trust" class="logo">
+    <h1>JAZALIA</h1>
+    <p><strong>Trade and Trust</strong> – Import & Export de Produits Agricoles</p>
+</header>
+
+<section class="intro">
+    <h2>Une chaîne de confiance, du champ à la table</h2>
+    <p>
+        JAZALIA est spécialisée dans l’import-export de riz et de produits agricoles,
+        en connectant producteurs, distributeurs et consommateurs autour de produits
+        authentiques et de qualité.
+    </p>
+
+    <div class="gallery">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Famille mangeant du riz">
+            <p>Le plaisir de partager un repas sain et savoureux en famille.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1" alt="Restaurant indien chic">
+            <p>L’élégance et le raffinement des cuisines du monde autour du riz basmati.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505842465776-3d90f6163100" alt="Bateau porte-conteneurs">
+            <p>Une logistique maritime fiable pour un commerce international maîtrisé.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1586521995568-39abaa0c2311" alt="Port commercial">
+            <p>Des infrastructures portuaires modernes au cœur des échanges mondiaux.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Plantation de riz">
+            <p>Des paysages agricoles préservés, sources de produits d’exception.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <strong>JAZALIA</strong><br>
+    50 bd Rahal el Maskini – 20 000 Casablanca<br>
+    📧 contact@jazalia.com
+</footer>
+
 </body>
 </html>
